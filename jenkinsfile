@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/<your-username>/<repo-name>.git'
+                git 'https://github.com/none66915-oss/forjenkins.git'
             }
         }
         stage('Compile') {
             steps {
-                sh 'javac HelloWorld.java'
+                sh 'javac helloworld.java'
             }
         }
         stage('Execute') {
             steps {
-                sh 'java HelloWorld'
+                sh 'java helloworld'
             }
         }
     }
