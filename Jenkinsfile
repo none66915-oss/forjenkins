@@ -1,11 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/none66915-oss/forjenkins.git'
-            }
-        }
+        // The 'Checkout' stage is handled automatically by Jenkins
         stage('Compile') {
             steps {
                 sh 'javac helloworld.java'
@@ -18,4 +14,3 @@ pipeline {
         }
     }
 }
-
