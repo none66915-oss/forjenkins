@@ -3,7 +3,7 @@ pipeline {
     
     tools {
         // This name MUST match the name you gave it in 'Manage Jenkins -> Tools'
-        jdk 'jdk17' 
+        jdk 'name' 
     }
 
     stages {
