@@ -1,9 +1,15 @@
 pipeline {
     agent any
+    
+    tools {
+        // This name MUST match the name you gave it in 'Manage Jenkins -> Tools'
+        jdk 'jdk17' 
+    }
+
     stages {
-        // The 'Checkout' stage is handled automatically by Jenkins
         stage('Compile') {
             steps {
+                // Now 'javac' will be found because Jenkins adds it to the PATH
                 sh 'javac helloworld.java'
             }
         }
